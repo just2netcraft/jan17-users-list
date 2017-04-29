@@ -1,4 +1,4 @@
-class UserService{
+class UserService {
 
     constructor() {
         this.url = "https://jsonplaceholder.typicode.com/users/";

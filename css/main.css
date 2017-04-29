@@ -1,27 +1,44 @@
+@font-face {
+    font-family: 'playfairdisplay';
+    src: url(../res/playfairdisplay/PlayfairDisplay-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'work-sans';
+    src: url(../res/worksans/WorkSans-Regular.ttf) format("truetype");
+}
+
 html, body {
     margin: 0;
     padding: 0;
     background: #aac2da;
-    font-family: "Open Sans";
+    font-family: "work-sans","Open Sans";
     font-weight: 300;
 }
 
 nav {
     background: #2b438b;
-    color: white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
     box-shadow: 4px 4px 0 2px rgba(0,0,0,.4);
-    padding: 20px;
-    margin: 20px;
-    width: 150px;
-    position: absolute;
-    top: 0;
+    color: white;
     left: 0;
+    margin: 20px;
+    padding: 20px;
+    position: absolute;
+    width: 150px;
+    top: 0;
 }
 
 ul, li {
     margin:0;
     padding:0;
     list-style: none;
+}
+
+li:hover {
+    cursor: pointer;
 }
 
 main {
@@ -37,4 +54,60 @@ dt {
 
 h1, h2, h3 {
     margin: 10px 0;
+}
+
+section {
+    min-height: 400px;
+    padding: 20px;
+}
+
+section .wrapper {
+    left: 250px;
+    margin: 0 10px;
+    position: absolute;
+}
+
+section .wrapper .seperator {
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3 );
+    width: 97%;
+}
+
+section .wrapper h2 {
+    text-decoration: underline;
+}
+
+.scrollbar {
+    background: #F5F5F5;
+    box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.5);
+    float: left;
+    height: 360px;
+    margin-bottom: 25px;
+    padding: 10px 0 10px 10px;
+    width: calc(100% - 30px);
+    overflow-y: scroll;
+}
+
+.force-overflow {
+    min-height: 450px;
+}
+
+#style-1::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
 }

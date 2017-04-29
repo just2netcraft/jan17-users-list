@@ -5,13 +5,13 @@ class UsersListComponent {
 
     renderUsers(){
        let users = this.usersList
-           .map( user => `<li data-user-id="${user.id}">${user.name}</li>` );
+           .map( user => `<li data-user-id="${user.id}" data-user-name="${user.name}">${user.name}</li>` );
 
        return users.join("");
     }
 
     onUserClick(e){
-        this.onUserCallback(e.target.dataset.userId);
+        this.onUserCallback(e.target.dataset.userId, e.target.dataset.userName);
     }
 
     onUserSelected(callback){
@@ -23,7 +23,7 @@ class UsersListComponent {
 <nav>
     <h3>Users</h3>
     <ul>
-        ${ this.renderUsers() } 
+        ${ this.renderUsers() }
     </ul>
 </nav>
 `);
